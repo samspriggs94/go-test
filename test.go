@@ -2,24 +2,12 @@ package main
 
 import "fmt"
 
-type Car struct{}
-
 type slowcar struct {
 	name string
-	Car
 }
 
 type fastcar struct {
 	name string
-	Car
-}
-
-type carinterface interface {
-	drive()
-}
-
-func drivecar(car carinterface) {
-	car.drive()
 }
 
 func (c fastcar) drive() {
@@ -35,7 +23,7 @@ func main() {
 	// Initializing the values
 	// of the author structure
 	slow_car := slowcar{
-		name: "volvo",
+		name: "Ferrari",
 	}
 
 	fast_car := fastcar{
